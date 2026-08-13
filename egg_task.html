@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        width:300px;
+        background:transparent;
+    }
+
+</style>
+<body style ="text-align: center">
+    <h1>Check your Luck!</h1>
+    <img id="one" onclick="egg_break('one')" src="https://media.istockphoto.com/id/475692361/vector/golden-egg.jpg?s=612x612&w=0&k=20&c=ibW4V2Z1LqFjKlJn2lSMYAxCX1HKuEo1kzvTdkSTIRk="/>
+    <img id="two" onclick="egg_break('two')" src="https://media.istockphoto.com/id/475692361/vector/golden-egg.jpg?s=612x612&w=0&k=20&c=ibW4V2Z1LqFjKlJn2lSMYAxCX1HKuEo1kzvTdkSTIRk="/>
+    <img id="three" onclick="egg_break('three')" src="https://media.istockphoto.com/id/475692361/vector/golden-egg.jpg?s=612x612&w=0&k=20&c=ibW4V2Z1LqFjKlJn2lSMYAxCX1HKuEo1kzvTdkSTIRk="/>
+
+    <script>
+        random_num=Math.ceil(Math.random()*3)
+
+        function egg_break(egg_num){
+            let curr_egg=document.getElementById(egg_num)
+            if(random_num==1 && egg_num=='one'){
+               curr_egg.src="https://i.pinimg.com/736x/42/dc/a6/42dca6b8e63bf303eae80a13afddfb73.jpg"
+            }else if(random_num==2 && egg_num=='two'){
+               curr_egg.src="https://i.pinimg.com/736x/42/dc/a6/42dca6b8e63bf303eae80a13afddfb73.jpg"
+            }else if(random_num==3 && egg_num=='three'){
+               curr_egg.src="https://i.pinimg.com/736x/42/dc/a6/42dca6b8e63bf303eae80a13afddfb73.jpg"
+            } else{
+                curr_egg.src="https://st2.depositphotos.com/6550340/9973/i/950/depositphotos_99736278-stock-photo-broken-golden-easter-egg.jpg"
+            }
+        }
+    </script>
+</body>
+</html>
